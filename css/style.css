@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  width:100%;
+}
+
+.wrapper {
+  width: 99%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+table {
+  font-size: 0.85rem;
+}
+
+.table td, .table th, .table tfoot {
+  padding: .55rem;
+}
+
+.table th, .table tfoot {
+  color: #969797;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.table tfoot th {
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Styling Checkbox Starts */
+.checkbox-label {
+  display: block;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 24px;
+  height: 22px;
+  width: 22px;
+  clear: both;
+}
+
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-label .checkbox-custom {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 22px;
+  width: 22px;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  border: 1px solid #c7cace;
+}
+
+
+.checkbox-label input:checked ~ .checkbox-custom {
+  background-color: #0067FF;
+  border-radius: 5px;
+  -webkit-transform: rotate(0deg) scale(1);
+  -ms-transform: rotate(0deg) scale(1);
+  transform: rotate(0deg) scale(1);
+  opacity:1;
+  border: 1px solid #0067FF;
+}
+
+
+.checkbox-label .checkbox-custom::after {
+  position: absolute;
+  content: "";
+  left: 12px;
+  top: 12px;
+  height: 0px;
+  width: 0px;
+  border-radius: 5px;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(0deg) scale(0);
+  -ms-transform: rotate(0deg) scale(0);
+  transform: rotate(0deg) scale(0);
+  opacity:1;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+}
+
+
+.checkbox-label input:checked ~ .checkbox-custom::after {
+-webkit-transform: rotate(45deg) scale(1);
+-ms-transform: rotate(45deg) scale(1);
+transform: rotate(45deg) scale(1);
+opacity:1;
+left: 8px;
+top: 3px;
+width: 6px;
+height: 12px;
+border: solid rgb(255, 255, 255);
+border-width: 0 2px 2px 0;
+background-color: transparent;
+border-radius: 0;
+}
+
+
+.arv-id{
+  color: #0067FF;
+  cursor:pointer;
+}
+
+.ikona {
+  font-size:1.1rem;
+  line-height: 1.2rem;
+  vertical-align: top;
+  padding-right: 0.5rem;
+}
+
+.status{
+  display:block;
+}
+
+.success{
+  color: #27ba4e;
+}
+
+.failed{
+  color: #f06565;
+}
+
+.pagination{
+  font-size:0.7rem;
+  padding-right: 0.2rem;
+}
+
+#example_length{
+  margin-left: 1rem;
+  font-size:0.9rem;
+}
+
+.output-type{
+  background-color: #fff;
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+  border-radius: 0.2rem;
+  color:rgb(124, 206, 181);
+  vertical-align: top;
+  padding-right: 0.1rem;
+  cursor:pointer;
+}
+
+.so{
+  color:#0067FF;
+}
+
+.md{
+  color:rgb(233, 183, 48);
+}
+
+.clicked{
+  background-color:#f4ffcf;
+}
+
+.item0{
+  padding:0;
+  margin:0;
+  font-size: 0.9rem;
+  color:#969797;
+  padding-top: 15px;
+}
+
+.item1{
+  font-size: 1.5rem;
+}
+
+.panel2{
+  height: 170px;
+  width: 100%;
+}
+
+.panel{
+  padding: 15px;
+  padding-top: 0;
+  position:relative;
+  padding-bottom: 5px;
+}
+
+.logout-wrapp{
+  position:absolute;
+  right:15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logout-wrapp button{
+  background-color: #ffff;
+  color: #0067FF;
+  border-radius: 0.3rem;
+  border: 2px solid #0067FF;
+  padding: 0.3rem;
+  margin-left: 0.6rem;
+  width: 100px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+.logout-wrapp button:hover{
+  background-color: #0067FF;
+  color: #fff;
+}
+
+.tile{
+  width: 15%;
+  border-right: 1px solid #c7cace;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tile:first-child{
+  margin-left:3%;
+}
+
+.nav-tabs .nav-link {
+  border: 1px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.nav-tabs .nav-link.active {
+  border-color: transparent;
+  border-bottom-color: #007bff;
+  margin: auto;
+}
+
+#nav-home{
+  height: 120px;
+  overflow-y: scroll;
+}
+
+#nav-home .row{
+  text-align: center;
+  height: 100%;
+}
+
+
+.tile h5.passed{
+  color: #27ba4e;
+}
+
+.tile h5.err{
+  color: #f06565;
+}
+
+.tile h5.warn{
+  color: #ffd64e;
+}
+
+.logo{
+  margin-top:10px;
+  height:calc(104*0.55px);
+  width:calc(145*0.55px);
+  float:left;
+  margin-right: 10px;
+  background-image: url("../img/logo.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.bars{
+  width:35%;
+  padding: 1rem;
+  padding-left: 2rem;
+}
+
+.progress-w-percent {
+  min-height: 20px;
+  margin-bottom: 10px;
+}
+
+.progress-w-percent .progress-value {
+  width: 40px;
+  float: right;
+  text-align: right;
+  line-height: 20px;
+}
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+.progress-w-percent .progress {
+  width: calc(100% - 50px);
+  float: left;
+  margin-top: 8px;
+}
+.progress-sm {
+  height: 5px;
+}
+.progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0.5rem;
+  overflow: hidden;
+  line-height: 0;
+  font-size: .75rem;
+  background-color: #e9ecef;
+  border-radius: .55rem;
+}
+
+.bar-label{
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+#compositions-list{
+  padding-left:3rem;
+  list-style: none;
+}
+
+
+ .pure-tree {
+	 text-align: left;
+	 display: block;
+}
+ .pure-tree.main-tree {
+	 width: 30em;
+	 display: inline-block;
+}
+ .pure-tree li label, .pure-tree li a{
+	 padding-left: 1.2em;
+}
+
+#compositions-list > li > ul > li > label, #compositions-list > li > ul > li > a {
+  padding-left: 2.4em;
+}
+
+#compositions-list > li > ul > li > ul > li > label, #compositions-list > li > ul > li > ul > li > a {
+  padding-left: 3.6em;
+}
+
+#compositions-list > li > ul > li > ul > li > ul > li > label, #compositions-list > li > ul > li > ul > li > ul > li > a {
+  padding-left: 4.8em;
+}
+
+ .pure-tree:not(.main-tree) li {
+	 overflow: hidden;
+	 height: 0;
+	 display: block;
+}
+ .pure-tree label {
+	 display: block;
+	 cursor: pointer;
+	 color: #717780;
+   border-bottom: 1px solid #c7cace;
+   padding: 0.25rem 0;
+   transition: all 0.3s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+ .pure-tree label:before {
+   color: #007bff;
+	 width: 0.1em;
+	 line-height: 1em;
+	 display: inline-block;
+   content: '\f07b';
+   font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+   font-weight: 900;
+   padding-right: 1.75em;
+   
+}
+ .pure-tree label:hover,  .pure-tree a:hover {
+   color: #007bff!important;
+}
+
+ .pure-tree .pure-tree_link a:before {
+  color: #007bff;
+  width: 0.1em;
+  line-height: 1em;
+  display: inline-block;
+  content: '\f478';
+  font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+  font-weight: 900;
+  padding-right: 1.75em;
+}
+
+.pure-tree .pure-tree_link a {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  color: #717780;
+  border-bottom: 1px solid #c7cace;
+  padding: 0.25rem 0;
+  transition: all 0.3s ease-out;
+-webkit-transition: all 0.2s ease-out;
+-moz-transition: all 0.2s ease-out;
+-ms-transition: all 0.2s ease-out;
+-o-transition: all 0.2s ease-out;
+font-size: 0.8rem;
+}
+
+ .pure-tree .pure-tree_link a:hover {
+	 color: #c7cace;
+}
+ .pure-tree.nested {
+	 padding-left: 1.7em;
+}
+ .pure-tree [type="checkbox"] {
+	 display: none;
+}
+ .pure-tree [type="checkbox"]:checked + label {
+	 border-bottom-color: #c7cace;
+}
+
+.pure-tree [type="checkbox"]:checked + label:before {
+  content: "\f07c";
+}
+ .pure-tree [type="checkbox"]:checked ~ ul > li {
+	 height: auto;
+}
+ 

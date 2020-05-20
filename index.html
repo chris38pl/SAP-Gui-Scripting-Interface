@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Sidebar template</title>
+
+    <!-- Load Data -->
+    <script src="data/data.js"></script>
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+ 
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="icon" href="img/icon.ico">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="panel">
+      <div class="logo"></div>
+      <h4 class="item0">Arvato Test Management</h4>
+      <h2 class="item1">Regresion Test Suite  /  <a style="transform:scale(0.9);color:#007bff;text-decoration: underline;cursor:pointer;">PP6 Test Suite Repository</a></h2>
+      <div class="logout-wrapp">
+        <button onclick="ReloadData()">RELOAD</button>
+        <button onclick="DisplayLog()">LOG</button>
+      </div>
+    </div>
+    <div class="panel2">
+      <nav>
+        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">Explorer</a>
+            <a class="nav-item nav-link active" id="nav-stat-tab" data-toggle="tab" href="#nav-stat" role="tab" aria-controls="nav-stat" aria-selected="true">Statistics</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Connection</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Settings</a>
+        </div>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <ul id="compositions-list" class="pure-tree main-tree">
+              <li>
+                <input type="checkbox" id="trigger-views" checked="checked">
+                <label for="trigger-views">Project One</label>
+                <ul class="pure-tree">
+                  <li>
+                    <input type="checkbox" id="trigger-layout">
+                    <label for="trigger-layout">Sales & Distribution</label>
+                    <ul class="pure-tree">
+                      <li>
+                        <input type="checkbox" id="trigger-base">
+                        <label for="trigger-base">Sales Order Maintenance</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-footer">
+                        <label for="trigger-footer">Quotation Maintenance</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="trigger-partials">
+                    <label for="trigger-partials">partials</label>
+                    <ul class="pure-tree">
+                      <li>
+                        <input type="checkbox" id="trigger-header">
+                        <label for="trigger-header">header</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-list">
+                        <label for="trigger-list">list</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-message">
+                        <label for="trigger-message">message</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-panel">
+                        <label for="trigger-panel">panel</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-prompt">
+                        <label for="trigger-prompt">prompt</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-sub-header">
+                        <label for="trigger-sub-header">sub-header</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="trigger-ui">
+                    <label for="trigger-ui">ui</label>
+                    <ul class="pure-tree">
+                      <li>
+                        <input type="checkbox" id="trigger-box-color">
+                        <label for="trigger-box-color">box-color</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-button">
+                        <label for="trigger-button">button</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-charts">
+                        <label for="trigger-charts">charts</label>
+                        <ul class="pure-tree">
+                          <li>
+                            <input type="checkbox" id="trigger-border">
+                            <label for="trigger-border">border</label>
+                            <ul class="pure-tree">
+                              <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <input type="checkbox" id="trigger-progress">
+                            <label for="trigger-progress">progress</label>
+                            <ul class="pure-tree">
+                              <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-check">
+                        <label for="trigger-check">check</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-dropdown">
+                        <label for="trigger-dropdown">dropdown</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-input">
+                        <label for="trigger-input">input</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-radio">
+                        <label for="trigger-radio">radio</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-rating-stars">
+                        <label for="trigger-rating-stars">rating-stars</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-textarea">
+                        <label for="trigger-textarea">textarea</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="trigger-toggle">
+                        <label for="trigger-toggle">toggle</label>
+                        <ul class="pure-tree">
+                          <li class="pure-tree_link"><a href="" title="index.jade" target="_blank">index.html</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane fade show active" id="nav-stat" role="tabpanel" aria-labelledby="nav-stat-tab">
+            <div class="row">
+              <div class="tile">
+                <h1 id="countTotal">0</h1>
+                <h5>Test Runs</h5>
+              </div>
+              <div class="tile">
+                <h1 id="countPassed">0</h1>
+                <h5 class="passed">Passed</h5>
+              </div>
+              <div class="tile">
+                <h1 id="countErrors">0</h1>
+                <h5 class="err">Errors</h5>
+              </div>
+              <div class="bars">
+                <h5 class="bar-label">This week</h5>
+                <div class="progress-w-percent">
+                  <span id="progress-value-week" class="progress-value">82%</span>
+                  <div class="progress progress-sm">
+                      <div class="progress-bar" role="progressbar" style="width: 82%;" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <h5 class="bar-label">This month</h5>
+                <div class="progress-w-percent">
+                  <span id="progress-value-month" class="progress-value">94%</span>
+                  <div class="progress progress-sm">
+                      <div class="progress-bar" role="progressbar" style="width: 94%;" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Hello World!</div>
+          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Hello3</div>
+      </div>
+    </nav>
+    </div>
+    <table id="example" class="table">
+      <thead>
+          <tr>
+              <th></th>
+              <th>ID</th>
+              <th>Test Case Name</th>
+              <th>Status</th>
+              <th>Module</th>
+              <th>System</th>
+              <th>Client</th>
+              <th>Exec. Start</th>
+              <th>Exec. End</th>
+              <th>Output</th>
+          </tr>
+      </thead>
+      <tfoot>
+          <tr>
+              <th></th>
+              <th>ID</th>
+              <th>Test Case Name</th>
+              <th>Status</th>
+              <th>Module</th>
+              <th>System</th>
+              <th>Client</th>
+              <th>Exec. Start</th>
+              <th>Exec. End</th>
+              <th>Output</th>
+          </tr>
+      </tfoot>
+  </table>
+  </div>
+  
+    <!-- jQuery + Popper + Bootstrap + Datatables-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+
+    
+</body>
+
+</html>
